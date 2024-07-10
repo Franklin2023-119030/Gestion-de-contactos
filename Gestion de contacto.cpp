@@ -131,6 +131,9 @@ int main() {
             case 4:
                 mostrarContactosOrdenadosPorDominio(contactos, numContactos);
                 break;
+            case 5:
+                cout << "Saliendo del programa---------\n";
+                break;
             default:
                 cout << "Opcion invalida. Intente de nuevo.\n";
                 break;
