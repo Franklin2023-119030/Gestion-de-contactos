@@ -80,7 +80,10 @@ int main() {
         switch(opcion) {
             case 1:
                 agregarContacto(contactos, numContactos);
-                break;	  
+                break;	 
+			case 2:
+                eliminarContacto(contactos, numContactos);
+				break;  
             default:
                 cout << "Opcion invalida. Intente de nuevo.\n";
                 break;
