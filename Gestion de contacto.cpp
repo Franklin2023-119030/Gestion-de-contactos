@@ -61,6 +61,23 @@ void eliminarContacto(ContactoEmail contactos[], int &numContactos) {
     numContactos--;
     cout << "El contacto fue eliminado exitosamente.\n";
 }
+void mostrarContactos(const ContactoEmail contactos[], int numContactos) {
+    if (numContactos == 0) {
+        cout << "No hay contactos para mostrar.\n";
+        return;
+    }
+
+    for (int i = 0; i < numContactos; i++) {
+        cout << "Contacto #" << i << ":\n";
+        cout << "Nombres Completos: " << contactos[i].nombresCompletos << endl;
+        cout << "Sexo: " << contactos[i].sexo << endl;
+        cout << "Edad: " << contactos[i].edad << endl;
+        cout << "Teléfono: " << contactos[i].telefono << endl;
+        cout << "Email: " << contactos[i].email << endl;
+        cout << "Nacionalidad: " << contactos[i].nacionalidad << endl;
+        cout << "--------------------------\n";
+    }
+}
 
 int main() {
     ContactoEmail contactos[100]; 
@@ -84,6 +101,9 @@ int main() {
 			case 2:
                 eliminarContacto(contactos, numContactos);
 				break;  
+			case 3:
+                mostrarContactos(contactos, numContactos);
+                break;	
             default:
                 cout << "Opcion invalida. Intente de nuevo.\n";
                 break;
